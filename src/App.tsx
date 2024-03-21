@@ -1,8 +1,9 @@
 import './App.css';
-import styled from 'styled-components';
+
 import {Header} from "./layout/header/Header";
 import {Main} from "./layout/sections/Main/Main";
-import {Skills} from "./layout/sections/Main/Skills/Skills";
+import {Skills} from "../src/layout/sections/Skills/Skills";
+import {Works} from "./layout/sections/works/Works";
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
             <Header/>
             <Main/>
             <Skills/>
+            <Works/>
         </div>
 
 
