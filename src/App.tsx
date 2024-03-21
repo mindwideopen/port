@@ -1,19 +1,20 @@
 import './App.css';
 import styled from 'styled-components';
+import {Header} from "./layout/header/Header";
+import {Main} from "./layout/sections/Main/Main";
 
 
 function App() {
     return (
-        <div className="App">
-            <Title>Welcome to my life</Title>
+        <div className='App'>
+            <Header/>
+            <Main/>
         </div>
+
+
+
     );
 }
 
 export default App;
 
-const Title = styled.h1`
-    font-size: 69px;
-    text-align: center;
-    color: green;
-`;
