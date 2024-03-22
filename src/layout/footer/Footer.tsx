@@ -37,7 +37,7 @@ export const Footer = () => {
                 </SocialItem>
 
             </SocialIconList>
-            <Copyright>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, totam!</Copyright>
+            <Copyright>© 2023 Nikolay Litvinov, All Rights Reserved.</Copyright>
 
         </FooterStyled>
     );
