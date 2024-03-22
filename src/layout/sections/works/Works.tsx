@@ -5,7 +5,7 @@ import {Menu} from "../../../components/menu/Menu";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Work} from "./work/Work";
 import socialImg from "../../../assets/images/social_network.webp"
-import timer from "../../../assets/images/Rectangle-14.webp"
+import timer from "../../../assets/images/Rectangle-14.png"
 
 
 

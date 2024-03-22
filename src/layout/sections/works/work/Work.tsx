@@ -27,6 +27,7 @@ const WorkStyled = styled.div`
 
 const Image= styled.img`
   width: 100%;
+    object-fit: cover;
 
     height: 260px;
 `
