@@ -20,11 +20,15 @@ export const Work = (props: WorksPropsType) => {
 };
 
 const WorkStyled = styled.div`
+    max-width: 540px;
+   
 
 `
 
 const Image= styled.img`
+  width: 100%;
 
+    height: 260px;
 `
 const WorkTitle = styled.h3`
 
