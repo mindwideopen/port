@@ -12,8 +12,8 @@ export const Main = () => {
                 <FlexWrapper justify={'space-between'} align={'center'}>
 
                     <div>
-                        <span>Hi There</span>
-                        <h2>I am Nikolay Litvinov</h2>
+                        <Greet>Hi There</Greet>
+                        <Name>I am Nikolay Litvinov</Name>
                         <h1>A Web Developer.</h1>
                     </div>
 
@@ -43,3 +43,9 @@ const MainStyled = styled.section`
 
 `
 
+const Greet = styled.h2`
+    
+`
+
+const Name = styled.h2`
+   `
