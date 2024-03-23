@@ -60,8 +60,7 @@ const Link = styled.a`
 
 const Mask = styled.span`   
 
-    display: inline-block;
-    
+    display: inline-block;    
     color: ${theme.colors.accent};
     position: absolute;
     top: 0;
