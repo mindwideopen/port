@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
-import photo from '../../../assets/images/SAD_photo.webp'
+import photo from '../../../assets/images/photo1704753319.jpeg'
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {isMainThread} from "node:worker_threads";
+
 
 
 export const Main = () => {
@@ -12,7 +12,7 @@ export const Main = () => {
 
                 <div>
                     <span>Hi There</span>
-                    <h2>I am Svetlana Dyablo</h2>
+                    <h2>I am Nikolay Litvinov</h2>
                     <h1>A Web Developer.</h1>
                 </div>
 
