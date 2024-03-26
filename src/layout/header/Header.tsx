@@ -4,6 +4,7 @@ import {Logo} from "../../components/logo/Logo";
 import {Container} from "../../components/Container/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
+import {theme} from "../../styles/Theme";
 
 
 const items = ['Home', 'Skills', 'Works', 'Testimony', 'Contact',]
@@ -28,6 +29,9 @@ const StyledHeader = styled.header`
     top: 0;
     left: 0;
     right: 0;
+    color: ${theme.colors.accent};
+    font-family:' Josefin Sans',sans-serif;
+    
     
   
 

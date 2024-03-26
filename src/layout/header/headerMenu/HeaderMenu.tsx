@@ -38,14 +38,9 @@ const StyledHeaderMenu = styled.nav`
         display: flex;
         gap: 20px;
         justify-content: center;
-
     }
     
-
-
 `
-
-
 
 const Link = styled.a`
    
@@ -106,13 +101,13 @@ const ListItem = styled.li`
         }
         
         ${Mask} {
-            color: ${theme.colors.accent};
+            color: ${theme.colors.font};
             
-            transform:  translatey( -3px) ;
+            transform:  skew( 30deg) ;
             
             & + ${Mask} {
                 
-                transform:  translatey(5px)
+                transform:  skew(-30deg);
             }
         }
         
