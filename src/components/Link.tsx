@@ -12,6 +12,8 @@ export const Link = styled.a`
     text-align: left;
     text-transform: uppercase;
     padding: 10px;
+    position: relative;
+    z-index: 0;
     
     &::before {
         

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {Link} from "../../../../components/Link";
 
 
 type WorksPropsType = {
@@ -21,6 +22,12 @@ export const Work = (props: WorksPropsType) => {
 
 const WorkStyled = styled.div`
     max-width: 540px;
+    ${Link} {
+        padding: 0;
+        & + & {
+            border: 3px solid red;
+        }
+    }
    
 
 `
@@ -40,5 +47,3 @@ const WorkText = styled.p`
 
 `
 
-const Link = styled.a`
-`
