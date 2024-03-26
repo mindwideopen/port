@@ -22,7 +22,7 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-    background-color: antiquewhite;
+    background-color: #1F1F20;
   padding: 20px 0;
     position: fixed;
     top: 0;
