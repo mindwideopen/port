@@ -17,14 +17,13 @@ export const Link = styled.a`
     
     &::before {
         
-        position: absolute;
-        
+        position: absolute;        
         display: inline-block;
         content: '';
         left: 0;
         right: 0;        
         background-color: ${theme.colors.accent};
-        bottom: -4px;
+        bottom: 4px;
         z-index: -1;
     }
     &:hover {
