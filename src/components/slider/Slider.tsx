@@ -17,7 +17,7 @@ export const Slider = () => {
             </FlexWrapper>
             <Pagination>
                 <span></span>
-                <span className={'active'}> </span>
+                <span className={"active"}> </span>
                 <span></span>
             </Pagination>
 
@@ -72,18 +72,21 @@ const Pagination = styled.div`
 span {
     display: inline-block;
     width: 7px;
-    height: 7px;
-    
+    height: 7px;    
     background-color:rgba(255,255,255,0.5);
     border-radius: 20px;
+
+    &.active {
+        background-color: red;
+        width: 20px
+    }
+    
+    
     & + span {
         margin-left: 5px;
         
     }
-    &.active {
-        background-color: ${theme.colors.accent};
-        width: 20px
-    }
+    
 }
     
 `
