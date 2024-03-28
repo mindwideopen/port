@@ -27,7 +27,7 @@ export const Slider = () => {
 
 const SliderStyled = styled.div`
     margin-top: 74px;
-    border: 1px solid red;
+  
     max-width: 500px;
     display: flex;
     flex-direction: column;
@@ -77,7 +77,7 @@ span {
     border-radius: 20px;
 
     &.active {
-        background-color: red;
+        background-color:${theme.colors.accent};
         width: 20px
     }
     
