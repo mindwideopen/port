@@ -33,7 +33,10 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
 };
 
 const StyledHeaderMenu = styled.nav`
-
+    @media ${theme.media.tablet}
+    {
+        display: none;
+    }
     ul {
         display: flex;
         gap: 20px;
@@ -62,6 +65,7 @@ const Mask = styled.span`
     left: 0;
     height: 50%;
     overflow-y: hidden;
+    transition: .2s;
     
     
     & + & {
@@ -103,11 +107,12 @@ const ListItem = styled.li`
         ${Mask} {
             color: ${theme.colors.font};
             
-            transform:  skew( 30deg) ;
+            transform:  skew( 30deg)  translateX(5px);
+            
             
             & + ${Mask} {
                 
-                transform:  skew(-30deg);
+                transform:  skew(30deg) translateX(-5px);
             }
         }
         
