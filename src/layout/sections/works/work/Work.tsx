@@ -56,7 +56,7 @@ const WorkStyled = styled.div`
 `
 
 const Image = styled.img`
-    width: 100%;
+    width: 540px;
     object-fit: cover;
 
     height: 260px;
