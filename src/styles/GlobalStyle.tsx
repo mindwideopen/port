@@ -56,6 +56,9 @@ line-height: 1.4;
     button{
         background-color: unset;
         border: none;
+        cursor: pointer;
+        color: ${theme.colors.font};
+        
     }
     
     section {
