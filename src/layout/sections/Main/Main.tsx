@@ -89,11 +89,9 @@ const Name = styled.h2`
 `
 
 const MainTitle = styled.h1`
-    font-family: 'Poppins', sans-serif;
-    font-size: 27px;
-    font-weight: 400;    
-    letter-spacing: 0;
-    text-align: left;
+    ${font ({family: 'Josefin Sans, sans-serif', weight:700, Fmax:27, Fmin: 20})}
+   
+    
 `
 const PhotoWrapper =  styled.div`
     position: relative;
