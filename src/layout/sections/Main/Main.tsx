@@ -20,9 +20,6 @@ export const Main = () => {
                     <PhotoWrapper>
                         <Photo src={photo} alt="Фотка"/>
                     </PhotoWrapper>
-
-
-
                 </FlexWrapper>
             </Container>
 
@@ -36,7 +33,12 @@ const Photo = styled.img`
 
     width: 350px;
     height: 430px;
-    object-fit: cover
+    object-fit: cover;
+    
+    @media ${theme.media.mobile} {
+    width: 310px;
+    height: 380px;
+}
 
 `
 
