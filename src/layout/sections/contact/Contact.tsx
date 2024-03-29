@@ -32,7 +32,7 @@ const ContactStyled = styled.section`
 `
 
 const FormStyled = styled.form`
-    width: 540px;
+    width: 100%;
     max-width:500px ;    
     display: flex;
     flex-direction: column;

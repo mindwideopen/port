@@ -4,13 +4,14 @@ import photo from '../../../assets/images/photo1704753319.jpeg'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container/Container";
 import {theme} from "../../../styles/Theme";
+import {font} from "../../../styles/Common";
 
 
 export const Main = () => {
     return (
         <MainStyled>
             <Container>
-                <FlexWrapper justify={'space-between'} align={'center'}>
+                <FlexWrapper wrap={'wrap'} justify={'space-between'} align={'center'}>
 
                     <div>
                         <Greet>Hi There</Greet>
@@ -59,13 +60,13 @@ const Greet = styled.h2`
 `
 
 const Name = styled.h2`
-    
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 50px;
-    font-weight: 700;
-    margin:  10px 0 10px 0;
+    ${font ({family: 'Josefin Sans, sans-serif', weight:700, Fmax:50, Fmin: 36})}
+    //font-family: 'Josefin Sans', sans-serif;
+    //font-size: 50px;
+    //font-weight: 700;
+    margin:  10px 0 ;
     letter-spacing: 0.05em;
-    text-align: left;  
+    
     
     
     span {
@@ -97,6 +98,11 @@ const MainTitle = styled.h1`
 const PhotoWrapper =  styled.div`
     position: relative;
     z-index: 0;
+    @media ${theme.media.mobile} {
+        margin-top: 40px;
+
+
+    }
     
     &::before {
         position: absolute;
@@ -107,6 +113,13 @@ const PhotoWrapper =  styled.div`
         top: -24px;
         left: 24px;
         z-index: -1;
+        
+        @media ${theme.media.mobile} {
+            width: 314px;
+            height: 414px;
+            
+            
+        }
     }
     
 `
