@@ -63,6 +63,9 @@ line-height: 1.4;
     
     section {
         padding: 100px 0;
+        @media ${theme.media.mobile} {
+            padding: 80px 0;
+        }
     }
     section:nth-of-type(odd) {
         background-color: ${theme.colors.primaryBg};

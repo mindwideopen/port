@@ -1,16 +1,16 @@
 
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
+import {font} from "../../styles/Common";
 
 export const SectionTitle = styled.h2`
-    position: relative;    
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 36px;
-    font-weight: 600;
-    line-height: 36px;
+    ${font({family:"'Josefin Sans', sans-serif", Fmax:36, Fmin: 30, weight: 600})}
+      
     letter-spacing: 5px;
     text-align: center;
     margin-bottom: 90px;
+    position: relative;
+    
     
     &:before {
         position: absolute;
@@ -22,6 +22,10 @@ export const SectionTitle = styled.h2`
         left: 50%;
         transform: translateX(-50%);
         bottom: -30px;
+        
+        @media ${theme.media.mobile} {
+            bottom: -24px;
+        }
     }
     
    

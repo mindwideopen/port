@@ -16,6 +16,8 @@ line-height: ${lineHeight || 1.2};
 
 
 /*mixIn formula*/
+
 font-size: calc( (100vw - 360px)/(1440 - 360) * (${Fmax} - ${Fmin}) + ${Fmin}px);
+
 /*mixIn formula*/
 `
