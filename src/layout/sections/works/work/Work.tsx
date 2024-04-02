@@ -31,7 +31,9 @@ export const Work = (props: WorksPropsType) => {
 
 const WorkStyled = styled.div`
     background-color: ${theme.colors.secondaryBg};
-    max-width: 540px;
+    
+    width: 330px;
+    flex-grow: 1;
 
     ${Link} {
         padding: 0;
@@ -47,9 +49,9 @@ const WorkStyled = styled.div`
 
     }
 
-        // ${Link} +  ${Link} {
-    //   
-    // }
+   @media ${theme.media.desktop} {
+       max-width: 540px;
+   }
 
 
 
@@ -71,6 +73,8 @@ const WorkText = styled.p`
 
 `
 const Description = styled.div`
+    
+    
     padding: 25px 20px;
 `
 
