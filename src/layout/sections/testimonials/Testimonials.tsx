@@ -32,8 +32,8 @@ export const Testimonials = () => {
 
 
 const TestimonialsStyled=styled.section`
-padding: 100px;
-    background-color: cornflowerblue;
+
+   
     
     ${IconWrapper} {
         margin-top: 30px;
