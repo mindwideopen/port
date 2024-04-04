@@ -26,6 +26,11 @@ export const Contact = () => {
 };
 
 const ContactStyled = styled.section`
+    ${SectionTitle} {
+        @media ${theme.media.mobile} {
+            margin-bottom: 74px;
+        }
+    }
     
     
 
