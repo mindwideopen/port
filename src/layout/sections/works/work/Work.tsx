@@ -99,7 +99,7 @@ const ImageWrapper = styled.div`
             }
         }        
         
-        &::before {
+        &:before {
             content: '';
             position: absolute;
             top: 0;
@@ -111,6 +111,28 @@ const ImageWrapper = styled.div`
         }
     }
 
+   @media ${theme.media.tablet} {
+       &:before {
+           content: '';
+           position: absolute;
+           top: 0;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           backdrop-filter: blur(4px);
+           background: rgba(0,0,0,0.3);
+       }
+       ${Button} {
+           opacity: 1;
+           &:before {
+               width: 100%;
+               height: 100%;
+           }
+           
+       }
+
+   }
+        
     
 
 `
