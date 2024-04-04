@@ -5,19 +5,25 @@ import {Icon} from "../../../components/icon/Icon";
 import {Slider} from "../../../components/slider/Slider";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {IconWrapper} from "../Skills/skill/Skill";
+import {Container} from "../../../components/Container/Container";
+import {theme} from "../../../styles/Theme";
 
 export const Testimonials = () => {
     return (
+
         <TestimonialsStyled>
-            <SectionTitle>Testimonisals</SectionTitle>
+            <Container>
+                <SectionTitle>Testimony</SectionTitle>
 
-            <FlexWrapper direction={'column'} align={'center'}>
-                <IconWrapper>
-                    <Icon iconId={'quote'}/>
-                </IconWrapper>
+                <FlexWrapper direction={'column'} align={'center'}>
+                    <IconWrapper>
+                        <Icon iconId={'quote'}/>
+                    </IconWrapper>
 
-                <Slider/>
-            </FlexWrapper>
+                    <Slider/>
+                </FlexWrapper>
+            </Container>
+
 
 
         </TestimonialsStyled>
@@ -31,5 +37,14 @@ padding: 100px;
     
     ${IconWrapper} {
         margin-top: 30px;
+        
+        }
     }
+${SectionTitle} {
+@media ${theme.media.mobile} {
+    margin-bottom: 75px;
+    
+}
+    
+    
 `
