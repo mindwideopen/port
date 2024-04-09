@@ -35,7 +35,7 @@ const SkillStyled = styled.div`
     
     width: 330px;
     flex-grow: 1;
-    padding: 62px 20px 40px;
+    padding: 47px 20px 38px;
     @media ${theme.media.mobile} {
         padding: 62px 0 40px;
     }

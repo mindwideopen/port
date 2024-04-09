@@ -24,16 +24,18 @@ export const Skills = () => {
                            skillTitle={'react'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'}/>
 
-                    <Skill iconId={'styledComponents'}
-                           skillTitle={'styledComponents'}
-                           skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'}/>
-
                     <Skill iconId={'typescript'}
                            skillTitle={'typeScript'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'}/>
 
+                    <Skill iconId={'styledComponents'}
+                           skillTitle={'styledComponents'}
+                           skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'}/>
+
+
+
                     <Skill iconId={'figma'}
-                           skillTitle={'figma'}
+                           skillTitle={'web design'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'}/>
 
                 </FlexWrapper>
