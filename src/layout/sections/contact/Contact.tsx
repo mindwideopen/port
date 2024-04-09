@@ -8,7 +8,7 @@ import {theme} from "../../../styles/Theme";
 export const Contact = () => {
     return (
         <ContactStyled>
-            <SectionTitle>Contacts</SectionTitle>
+            <SectionTitle>Contact</SectionTitle>
             <Container>
                 <FormStyled>
                     <Field placeholder={'Name'}/>
@@ -26,9 +26,13 @@ export const Contact = () => {
 };
 
 const ContactStyled = styled.section`
+    
+    
     ${SectionTitle} {
+        margin-top: -25px;
         @media ${theme.media.mobile} {
             margin-bottom: 74px;
+            
         }
     }
     
@@ -38,10 +42,10 @@ const ContactStyled = styled.section`
 
 const FormStyled = styled.form`
     width: 100%;
-    max-width:500px ;    
+    max-width:540px ;    
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     align-items: center;
     margin: 0 auto;
 
