@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 
 export const Button = styled.button`
+    margin-top: -7px;
     position: relative;
     text-transform: uppercase;
     width: 170px;
