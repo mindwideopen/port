@@ -28,7 +28,7 @@ export const Skills = () => {
                            skillTitle={'typeScript'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'}/>
 
-                    <Skill iconId={'styledComponents'}
+                    <Skill iconId={'styled Components'}
                            skillTitle={'styledComponents'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'}/>
 

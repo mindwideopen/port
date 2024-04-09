@@ -44,9 +44,10 @@ const SkillStyled = styled.div`
 `
 
 const SkillTitle = styled.h2`
-    margin: 70px 0 15px;    
+    margin: 68px 0 15px;    
     text-align: left;
     text-transform: uppercase;
+    letter-spacing: 1px;
     
     
 

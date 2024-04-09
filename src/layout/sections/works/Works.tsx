@@ -19,7 +19,7 @@ export const Works = () => {
                 <TabMenu menuItems={worksItems}/>
                 <FlexWrapper  wrap={'wrap'} justify={'space-between'} >
                     <Work workTitle={'Social Network'} workText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'} src={socialImg}/>
-                    <Work workTitle={'Timer'} workText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'} src={timer}/>
+                    <Work workTitle={'Timer'} workText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit ut labore et dolore magna aliqua Ut enim'} src={timer}/>
 
                 </FlexWrapper>
             </Container>
@@ -34,6 +34,7 @@ const WorksStyled = styled.section`
     ${FlexWrapper} {
         gap: 30px;
     }
+    padding: 84px 0 100px;
     
 
 `

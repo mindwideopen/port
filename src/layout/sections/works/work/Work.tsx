@@ -69,7 +69,7 @@ const WorkTitle = styled.h3`
 
 
 const WorkText = styled.p`
-    margin: 14px 0 10px;
+    margin: 17px 0 18px;
 
 `
 const Description = styled.div`
