@@ -19,6 +19,15 @@ export const GlobalStyle= createGlobalStyle`
         line-height: 1.2;
     }
     
+     h2 {
+         
+         font-family: Josefin Sans, sans-serif;
+         font-size: 16px;
+         font-weight: 700;
+         line-height: 16px;
+         
+         
+     }
     h3 {
         font-family: 'Josefin Sans', sans-serif;
         font-size: 16px;

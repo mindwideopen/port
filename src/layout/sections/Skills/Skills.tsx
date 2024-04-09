@@ -13,7 +13,7 @@ export const Skills = () => {
                 <FlexWrapper wrap={'wrap'} justify={'space-between'}>
 
                     <Skill iconId={'codeSvg'}
-                           skillTitle={'html'}
+                           skillTitle={'html5'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'}/>
 
                     <Skill iconId={'css'}
