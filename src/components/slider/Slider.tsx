@@ -53,7 +53,7 @@ const Text = styled.p`
 
 const Name = styled.span`
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 19px;
     margin-bottom: 35px;
     color: ${theme.colors.font};
     font-family: Josefin Sans, sans-serif;
