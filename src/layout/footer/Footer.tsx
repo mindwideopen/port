@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon";
 import {theme} from "../../styles/Theme";
+import {font} from "../../styles/Common";
 
 
 export const Footer = () => {
@@ -54,16 +55,15 @@ const FooterStyled = styled.section`
 `
 
 const Name = styled.span`
-
+${font({
+    family:'Josefin Sans, sans-serif',
+    weight:700,
+    Fmin:16,
+    Fmax:22
     
-    font-family: Josefin Sans,sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 22px;
+})}     
+    
     letter-spacing: 3px;
-    
-    
-
 `
 
 const SocialIconList = styled.ul`

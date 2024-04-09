@@ -11,7 +11,7 @@ export const Main = () => {
     return (
         <MainStyled>
             <Container>
-                <FlexWrapper wrap={'wrap'} justify={'space-around'} align={'center'}>
+                <FlexWrapper wrap={'wrap'} justify={'space-between'} align={'center'}>
 
                     <div>
                         <Greet>Hi There</Greet>
@@ -93,7 +93,7 @@ const Name = styled.h2`
 `
 
 const MainTitle = styled.h1`
-    ${font ({family: 'Josefin Sans, sans-serif', weight:700, Fmax:27, Fmin: 20})}
+    ${font ({family: 'Poppins, sans-serif', Fmax:27, Fmin: 20})}
    
     
 `
