@@ -1,42 +1,29 @@
 import React from 'react';
-import styled from "styled-components";
+
 import {Logo} from "../../components/logo/Logo";
 import {Container} from "../../components/Container/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
-import {HeaderMenu} from "./headerMenu/HeaderMenu";
-import {theme} from "../../styles/Theme";
+import {DesktopMenu} from "./desktopMenu/DesktopMenu";
+
 import {MobileMenu} from "./MobileMenu/MobileMenu";
+import {S} from './Header_Styles'
 
 
 const items = ['Home', 'Skills', 'Works', 'Testimony', 'Contact',]
-export const Header = () => {
+export const Header: React.FC = () => {
     return (
-        <StyledHeader>
+        <S.StyledHeader>
             <Container>
                 <FlexWrapper justify={'space-between'}>
                     <Logo/>
-                    <HeaderMenu menuItems={items}/>
+                    <DesktopMenu menuItems={items}/>
                     <MobileMenu menuItems={items}/>
                 </FlexWrapper>
 
             </Container>
-        </StyledHeader>
+        </S.StyledHeader>
     );
 };
 
-const StyledHeader = styled.header`
-    background-color: #1F1F20;
-  padding: 20px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    color: ${theme.colors.accent};
-    font-family:' Josefin Sans',sans-serif;
-    z-index: 99999;
-    
-    
-   
-    
-    `
+
 

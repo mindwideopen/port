@@ -1,11 +1,13 @@
 import React from 'react';
-import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
+import styled from "styled-components";
 
 
-export const HeaderMenu = (props: { menuItems: Array<string> }) => {
+
+
+export const Menu: React.FC<{menuItems: Array<string>}> = (props: { menuItems: Array<string> }) => {
     return (
-        <StyledHeaderMenu>
+        <div>
             <ul>
                 {props.menuItems.map((item, index) => {
                     return <ListItem key={index}>
@@ -28,44 +30,31 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
 
                 }
             </ul>
-        </StyledHeaderMenu>
+        </div>
     );
 };
 
-const StyledHeaderMenu = styled.nav`
-    @media ${theme.media.tablet}
-    {
-        display: none;
-    }
-    ul {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-    }
-    
-`
 
 const Link = styled.a`
-   
+
     font-family: 'Josifin Sans', 'sans-serif';
     font-weight: 400;
     font-size: 30px;
     line-height: 55px;
     text-align: center;
     color: transparent;
-    
+
 `
 
-const Mask = styled.span`   
+const Mask = styled.span`
 
-    display: inline-block;    
+    display: inline-block;
     color: ${theme.colors.accent};
     position: absolute;
     top: 0;
     left: 0;
     height: 50%;
     overflow-y: hidden;
-    transition: .2s;
     
     
     & + & {
@@ -107,15 +96,15 @@ const ListItem = styled.li`
         ${Mask} {
             color: ${theme.colors.font};
             
-            transform:  skew( 30deg)  translateX(5px);
-            
+            transform:  skew( 30deg) ;
             
             & + ${Mask} {
                 
-                transform:  skew(30deg) translateX(-5px);
+                transform:  skew(-30deg);
             }
         }
         
         
     }
 `
+export default Menu
