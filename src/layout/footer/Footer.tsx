@@ -61,8 +61,8 @@ ${font({
     Fmin:16,
     Fmax:22
     
-})}     
-    
+})}
+line-height: 22px;
     letter-spacing: 3px;
 `
 
