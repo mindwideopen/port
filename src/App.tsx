@@ -7,6 +7,7 @@ import {Works} from "./layout/sections/works/Works";
 import {Testimonials} from "./layout/sections/testimonials/Testimonials";
 import {Contact} from "./layout/sections/contact/Contact";
 import {Footer} from "./layout/footer/Footer";
+import Invitation from "./layout/sections/Invitation/Invitation";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Works/>
             <Testimonials/>
             <Contact/>
+            <Invitation/>
             <Footer/>
         </div>
 
