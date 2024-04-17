@@ -21,7 +21,7 @@ export const Main = () => {
                     <PhotoWrapper>
                         <Photo src={photo} alt="Фотка"/>
                     </PhotoWrapper>
-                </FlexWrapper>s
+                </FlexWrapper>
             </Container>
 
         </MainStyled>
