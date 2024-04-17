@@ -11,13 +11,30 @@ import {S} from './Header_Styles'
 
 const items = ['Home', 'Skills', 'Works', 'Testimony', 'Contact',]
 export const Header: React.FC = () => {
+
+
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakPoint = 768;
+
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth)
+        window.addEventListener("resize", handleWindowResize);
+
+
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
+
+
+
     return (
         <S.StyledHeader>
             <Container>
                 <FlexWrapper justify={'space-between'}>
                     <Logo/>
-                    <DesktopMenu menuItems={items}/>
-                    <MobileMenu menuItems={items}/>
+                    {width < breakPoint ? <MobileMenu menuItems={items}/>
+                                        : <DesktopMenu menuItems={items}/>}
+
                 </FlexWrapper>
 
             </Container>
