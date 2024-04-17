@@ -29,5 +29,9 @@ ${Container} {
     flex-direction: column;
     align-items: center;
 }    
+    ${SectionTitle} {
+        margin-bottom: 80px;
+    }
 
+    
 `
