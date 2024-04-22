@@ -1,51 +1,76 @@
 import React from 'react';
-import styled from "styled-components";
+import {S} from './skill/Skill_Styles'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Skill} from "./skill/Skill";
 import {SectionTitle} from "../../../components/sectionTitle/SectionTitle";
 import {Container} from "../../../components/Container/Container";
 
+const skillData = [
+
+    {
+        iconId: 'codeSvg',
+        skillTitle: 'html5',
+        skillText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'
+    },
+
+    {
+        iconId: 'css',
+        skillTitle: 'css',
+        skillText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'
+
+    },
+
+    {
+        iconId: 'react',
+        skillTitle: 'react',
+        skillText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'
+
+    },
+
+    {
+        iconId: 'typescript',
+        skillTitle: 'typeScript',
+        skillText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'
+
+    },
+
+    {
+        iconId: 'styledComponents',
+        skillTitle: 'styledComponents',
+        skillText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'
+
+    },
+
+    {
+        iconId: 'figma',
+        skillTitle: 'design',
+        skillText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'
+
+    }
+
+]
+
+
 export const Skills = () => {
     return (
-        <SkillsStyled>
+        <S.SkillsStyled>
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
                 <FlexWrapper wrap={'wrap'} justify={'space-between'}>
 
-                    <Skill iconId={'codeSvg'}
-                           skillTitle={'html5'}
-                           skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'}/>
-
-                    <Skill iconId={'css'}
-                           skillTitle={'css'}
-                           skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'}/>
-
-                    <Skill iconId={'react'}
-                           skillTitle={'react'}
-                           skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'}/>
-
-                    <Skill iconId={'typescript'}
-                           skillTitle={'typeScript'}
-                           skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'}/>
-
-                    <Skill iconId={'styledComponents'}
-                           skillTitle={'styledComponents'}
-                           skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'}/>
+                    {skillData.map((item, index) =>
+                        <Skill iconId={item.iconId} key={index}
+                               skillTitle={item.skillTitle}
+                               skillText={item.skillText}/>
+                    )}
 
 
-
-                    <Skill iconId={'figma'}
-                           skillTitle={'web design'}
-                           skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor eligendi exercitationem iste labore non quis soluta tempore velit voluptatum.'}/>
 
                 </FlexWrapper>
             </Container>
 
 
-        </SkillsStyled>
+        </S.SkillsStyled>
     );
 };
 
-const SkillsStyled = styled.section`
-
-`

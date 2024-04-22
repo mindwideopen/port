@@ -1,17 +1,18 @@
 import React from 'react';
-import styled from "styled-components";
 import {SectionTitle} from "../../../components/sectionTitle/SectionTitle";
 import {Icon} from "../../../components/icon/Icon";
 import {Slider} from "../../../components/slider/Slider";
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {IconWrapper} from "../Skills/skill/Skill";
+import {S} from './Testimonials_styles'
 import {Container} from "../../../components/Container/Container";
-import {theme} from "../../../styles/Theme";
+import {IconWrapper} from "../Skills/skill/Skill_Styles";
+
+
 
 export const Testimonials = () => {
     return (
 
-        <TestimonialsStyled>
+        <S.TestimonialsStyled>
             <Container>
                 <SectionTitle>Testimony</SectionTitle>
 
@@ -26,25 +27,9 @@ export const Testimonials = () => {
 
 
 
-        </TestimonialsStyled>
+        </S.TestimonialsStyled>
     );
 };
 
 
-const TestimonialsStyled=styled.section`
 
-   
-    
-    ${IconWrapper} {
-        margin-top: 30px;
-        
-        }
-    }
-${SectionTitle} {
-@media ${theme.media.mobile} {
-    margin-bottom: 75px;
-    
-}
-    
-    
-`
