@@ -1,8 +1,7 @@
 import React from 'react';
-import styled from "styled-components";
 import {Link} from "../../../../components/Link";
-import {theme} from "../../../../styles/Theme";
 import {Button} from "../../../../components/button/Button";
+import {S} from './WorkStyles'
 
 
 type WorksPropsType = {
@@ -10,129 +9,22 @@ type WorksPropsType = {
     workText: string,
     src: string
 }
-export const Work = (props: WorksPropsType) => {
+export const Work:React.FC<WorksPropsType> = (props: WorksPropsType) => {
     return (
-        <WorkStyled>
-            <ImageWrapper>
-                <Image src={props.src} alt={props.workTitle}/>
+        <S.WorkStyled>
+            <S.ImageWrapper>
+                <S.Image src={props.src} alt={props.workTitle}/>
                 <Button>BUTTON</Button>
-            </ImageWrapper>
+            </S.ImageWrapper>
 
-            <Description>
-                <WorkTitle>{props.workTitle}</WorkTitle>
-                <WorkText>{props.workText}</WorkText>
+            <S.Description>
+                <S.WorkTitle>{props.workTitle}</S.WorkTitle>
+                <S.WorkText>{props.workText}</S.WorkText>
                 <Link href={'#'}>demo</Link>
                 <Link href={'#'}>code</Link>
-            </Description>
+            </S.Description>
 
-        </WorkStyled>
+        </S.WorkStyled>
     );
 };
 
-const WorkStyled = styled.div`
-    background-color: ${theme.colors.secondaryBg};
-    
-    width: 330px;
-    flex-grow: 1;
-
-    ${Link} {
-        padding: 0;
-
-        & + ${Link} {
-            margin-left: 20px;
-        }
-
-    }
-
-    ${Link}:before {
-        bottom: -3px;
-
-    }
-
-   @media ${theme.media.desktop} {
-       max-width: 540px;
-   }
-
-
-
-`
-
-const Image = styled.img`
-    width: 100%;
-    object-fit: cover;
-
-    height: 260px;
-`
-const WorkTitle = styled.h3`
-
-`
-
-
-const WorkText = styled.p`
-    margin: 17px 0 18px;
-
-`
-const Description = styled.div`
-    
-    
-    padding: 25px 20px;
-`
-
-
-const ImageWrapper = styled.div`
-
-    position: relative;
-    ${Button} {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -23%);
-        opacity: 0;
-    }
-    
-    &:hover{
-        ${Button} {
-            opacity: 1;
-            &:before {
-                width: 100%;
-                height: 100%;
-            }
-        }        
-        
-        &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            backdrop-filter: blur(4px);
-            background: rgba(0,0,0,0.3);
-        }
-    }
-
-   @media ${theme.media.tablet} {
-       &:before {
-           content: '';
-           position: absolute;
-           top: 0;
-           bottom: 0;
-           left: 0;
-           right: 0;
-           backdrop-filter: blur(4px);
-           background: rgba(0,0,0,0.3);
-       }
-       ${Button} {
-           opacity: 1;
-           &:before {
-               width: 100%;
-               height: 100%;
-           }
-           
-       }
-
-   }
-        
-    
-
-`

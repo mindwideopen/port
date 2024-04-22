@@ -5,11 +5,11 @@ import {Slider} from "../../../components/slider/Slider";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {S} from './Testimonials_styles'
 import {Container} from "../../../components/Container/Container";
-import {IconWrapper} from "../Skills/skill/Skill_Styles";
 
 
 
-export const Testimonials = () => {
+
+export const Testimonials:React.FC = () => {
     return (
 
         <S.TestimonialsStyled>
@@ -17,15 +17,13 @@ export const Testimonials = () => {
                 <SectionTitle>Testimony</SectionTitle>
 
                 <FlexWrapper direction={'column'} align={'center'}>
-                    <IconWrapper>
+                    <S.IconWrapper>
                         <Icon iconId={'quote'}/>
-                    </IconWrapper>
+                    </S.IconWrapper>
 
                     <Slider/>
                 </FlexWrapper>
             </Container>
-
-
 
         </S.TestimonialsStyled>
     );

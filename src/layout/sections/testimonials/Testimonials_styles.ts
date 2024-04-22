@@ -23,5 +23,6 @@ ${SectionTitle} {
 `
 
 export const S = {
-    TestimonialsStyled
+    TestimonialsStyled,
+    IconWrapper
 }
