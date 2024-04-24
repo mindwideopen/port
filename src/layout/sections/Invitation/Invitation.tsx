@@ -4,7 +4,7 @@ import {SectionTitle} from "../../../components/sectionTitle/SectionTitle";
 import {Button} from "../../../components/button/Button";
 import {Container} from "../../../components/Container/Container";
 
-export const Invitation = () => {
+export const Invitation:React.FC = () => {
     return (
         <InvitationStyled>
             <Container>
@@ -21,7 +21,7 @@ export const Invitation = () => {
     );
 };
 
-export default Invitation;
+export default Invitation ;
 
 const InvitationStyled = styled.section`
 ${Container} {
