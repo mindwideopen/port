@@ -9,7 +9,7 @@ type IconPropsType = {
 
 }
 
-export const Icon = (props:IconPropsType) => {
+export const Icon: React.FC<IconPropsType> = (props:IconPropsType) => {
     return (
         <svg width={props.width||'50px'}
              height={props.height||'50px'}
