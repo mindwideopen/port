@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {SectionTitle} from "../../../components/sectionTitle/SectionTitle";
 import {TabMenu} from "./tabMenu/TabMenu";
 import {FlexWrapper} from "../../../components/FlexWrapper";
@@ -13,26 +13,67 @@ const worksData = [
     {
         workTitle: 'Social Network',
         workText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-        src: socialImg
+        src: socialImg,
+        type: 'spa',
 
     },
     {
-        workTitle: 'Timer',
+        workTitle: 'Timer', 
         workText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit ut labore et dolore magna aliqua Ut enim',
-        src: timer
+        src: timer,
+        type: 'react',
 
     }
 
 ]
-const worksItems = ['All', 'landing page', 'React', 'spa']
-export const Works= () => {
+
+const tabsItems: Array<{ title: string, status: 'all' | 'landing page' | 'react' | 'spa' }> = [
+    {
+        title: 'All',
+        status: 'all'
+    },
+    {
+        title: 'React',
+        status: 'react'
+    },
+    {
+        title: 'Landing Page',
+        status: 'landing page'
+    },
+    {
+        title: 'SPA',
+        status: 'spa'
+    },
+
+]
+
+export const Works: React.FC = () => {
+    const [currentFilterStatus, setCurrentFilterStatus] = useState('all')
+
+    let filteredWorks = worksData
+
+    if (currentFilterStatus === 'landing page') {
+        filteredWorks = worksData.filter(item => item.type === 'landing page')
+    }
+    if (currentFilterStatus === 'react') {
+        filteredWorks = worksData.filter(item => item.type === 'react')
+    }
+    if (currentFilterStatus === 'spa') {
+        filteredWorks = worksData.filter(item => item.type === 'spa')
+    }
+
+    function changeFilterStatus (value: 'all' | 'landing page' | 'react' | 'spa' ) {
+
+            setCurrentFilterStatus (value)
+    }
+
     return (
         <S.WorksStyled>
             <Container>
                 <SectionTitle>My Works</SectionTitle>
-                <TabMenu menuItems={worksItems}/>
+                <TabMenu tabItems={tabsItems} changeFilterStatus={changeFilterStatus} />
                 <FlexWrapper wrap={'wrap'} justify={'space-between'}>
-                    {worksData.map((item, index) =>
+                    {filteredWorks.map((item, index) =>
                         <Work workTitle={item.workTitle} key={index}
                               workText={item.workText}
                               src={item.src}/>)

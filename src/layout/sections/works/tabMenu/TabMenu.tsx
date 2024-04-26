@@ -3,14 +3,26 @@ import styled from "styled-components";
 
 import {Link} from "../../../../components/Link";
 
+type TabMenuPropsType = {
+    tabItems: Array<{title: string, status: 'all' | 'landing page' | 'react' | 'spa'}>,
+    changeFilterStatus: (value:'all' | 'landing page' | 'react' | 'spa') => void
+}
 
 
-export const TabMenu = (props: {menuItems: Array<string>}) => {
+export const TabMenu = (props: TabMenuPropsType) => {
     return (
         <StyledTabMenu>
             <ul>
-                {props.menuItems.map((key, index) => {
-                    return <ListItem key={index}><Link href="#">{key}</Link></ListItem>
+                {props.tabItems.map((item, index) => {
+                    return(
+                    (<ListItem  key={index}>
+
+                        <Link as={'button'}  onClick={() => {props.changeFilterStatus(item.status)}}>
+                            {item.title}
+                        </Link>
+
+                    </ListItem>)
+                    )
                 })
 
                 }
@@ -19,14 +31,14 @@ export const TabMenu = (props: {menuItems: Array<string>}) => {
     );
 };
 
-const StyledTabMenu=styled.nav`
-    
+const StyledTabMenu = styled.nav`
+
     ul {
         display: flex;
         justify-content: space-between;
         max-width: 352px;
-        width: 100%;        
-       margin: 0 auto 45px;  
+        width: 100%;
+        margin: 0 auto 45px;
     }
 
 `
