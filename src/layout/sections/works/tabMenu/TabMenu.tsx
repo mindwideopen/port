@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import {Link} from "../../../../components/Link";
 
-type TabStatusType = 'all' | 'landing page' | 'react' | 'spa'
+export type TabStatusType = 'all' | 'landing page' | 'react' | 'spa'
 
 type TabMenuPropsType = {
     tabItems: Array<{title: string, status: TabStatusType}>,

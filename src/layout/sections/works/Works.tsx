@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {SectionTitle} from "../../../components/sectionTitle/SectionTitle";
-import {TabMenu} from "./tabMenu/TabMenu";
+import {TabMenu, TabStatusType} from "./tabMenu/TabMenu";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Work} from "./work/Work";
 import socialImg from "../../../assets/images/social_network.webp"
@@ -27,7 +27,7 @@ const worksData = [
 
 ]
 
-const tabsItems: Array<{ title: string, status: 'all' | 'landing page' | 'react' | 'spa' }> = [
+const tabsItems: Array<{ title: string, status: TabStatusType }> = [
     {
         title: 'All',
         status: 'all'
