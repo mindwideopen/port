@@ -67,11 +67,14 @@ export const Works: React.FC = () => {
             setCurrentFilterStatus (value)
     }
 
+
     return (
         <S.WorksStyled>
             <Container>
                 <SectionTitle>My Works</SectionTitle>
-                <TabMenu tabItems={tabsItems} changeFilterStatus={changeFilterStatus} />
+                <TabMenu tabItems={tabsItems}
+                         changeFilterStatus={changeFilterStatus}
+                         currentFilterStatus={currentFilterStatus}/>
                 <FlexWrapper wrap={'wrap'} justify={'space-between'}>
                     {filteredWorks.map((item, index) =>
                         <Work workTitle={item.workTitle} key={index}

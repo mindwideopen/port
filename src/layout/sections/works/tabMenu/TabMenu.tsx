@@ -6,8 +6,9 @@ import {Link} from "../../../../components/Link";
 export type TabStatusType = 'all' | 'landing page' | 'react' | 'spa'
 
 type TabMenuPropsType = {
-    tabItems: Array<{title: string, status: TabStatusType}>,
-    changeFilterStatus: (value:TabStatusType) => void
+    tabItems: Array<{title: string,status: TabStatusType}>,
+    changeFilterStatus: (value: TabStatusType) => void,
+    currentFilterStatus: string
 }
 
 
@@ -16,14 +17,16 @@ export const TabMenu = (props: TabMenuPropsType) => {
         <StyledTabMenu>
             <ul>
                 {props.tabItems.map((item, index) => {
-                    return(
-                    (<ListItem  key={index}>
+                    return (
+                        (<ListItem key={index}>
 
-                        <Link as={'button'}  onClick={() => {props.changeFilterStatus(item.status)}}>
-                            {item.title}
-                        </Link>
+                            <Link active={props.currentFilterStatus === item.status} as={'button'} onClick={() => {
+                                props.changeFilterStatus(item.status)
+                            }}>
+                                {item.title}
+                            </Link>
 
-                    </ListItem>)
+                        </ListItem>)
                     )
                 })
 
