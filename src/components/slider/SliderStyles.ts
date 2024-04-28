@@ -5,6 +5,7 @@ const SliderStyled = styled.div`
     margin-top: 74px;
   
     max-width: 500px;
+     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,6 +14,8 @@ const SliderStyled = styled.div`
 
 const Slide = styled.div`
     text-align: center;
+    border: 1px solid red;
+    max-width: 500px;
 
 `
 

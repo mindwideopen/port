@@ -99,11 +99,10 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
 
     span {
         display: block;
-
+        position: absolute;
         width: 36px;
         height: 2px;
-        background-color: ${theme.colors.font};
-        position: absolute;
+        background-color: ${theme.colors.font};        
         left: 40px;
         bottom: 50px;
         ${props => props.isOpen && css <{ isOpen: boolean }>`
@@ -180,9 +179,9 @@ const MobileMenuPopUp = styled.div<{isOpen: boolean}>`
 //DesktopMenu
 
 const DesktopMenu = styled.nav`
-    @media ${theme.media.tablet}
-    {
-        display: none;
+    // @media ${theme.media.tablet}
+    // {
+    //     display: none;
     }
     ul {
         display: flex;

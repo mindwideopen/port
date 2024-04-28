@@ -4,7 +4,6 @@ import {Logo} from "../../components/logo/Logo";
 import {Container} from "../../components/Container/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {DesktopMenu} from "./desktopMenu/DesktopMenu";
-
 import {MobileMenu} from "./MobileMenu/MobileMenu";
 import {S} from './Header_Styles'
 
@@ -19,7 +18,6 @@ export const Header: React.FC = () => {
     React.useEffect(() => {
         const handleWindowResize = () => setWidth(window.innerWidth)
         window.addEventListener("resize", handleWindowResize);
-
 
         return () => window.removeEventListener("resize", handleWindowResize);
     }, []);

@@ -6,7 +6,7 @@ import {S} from '../HederMenuStyles'
 
 export const Menu: React.FC<{menuItems: Array<string>}> = (props: { menuItems: Array<string> }) => {
     return (
-        <div>
+
             <ul>
                 {props.menuItems.map((item, index) => {
                     return <S.MenuItem key={index}>
@@ -29,7 +29,7 @@ export const Menu: React.FC<{menuItems: Array<string>}> = (props: { menuItems: A
 
                 }
             </ul>
-        </div>
+
     );
 };
 
