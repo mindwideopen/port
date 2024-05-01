@@ -46,29 +46,7 @@ const Name = styled.span`
 
 `
 
-const Pagination = styled.div`
 
-span {
-    display: inline-block;
-    width: 7px;
-    height: 7px;    
-    background-color:rgba(255,255,255,0.5);
-    border-radius: 20px;
-
-    &.active {
-        background-color:${theme.colors.accent};
-        width: 20px
-    }
-    
-    
-    & + span {
-        margin-left: 5px;
-        
-    }
-    
-}
-    
-`
 export const S = {
-    SliderStyled, Name, Pagination, Text, Slide
+    SliderStyled, Name,Text, Slide
 }
