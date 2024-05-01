@@ -16,7 +16,7 @@ export const Main: React.FC = () => {
 
                     <div>
 
-                        <S.Greet>Hi There</S.Greet>
+                        <S.Greet>Hello There</S.Greet>
                         <S.Name>I am <span>Nikolay Litvinov</span></S.Name>
                         <S.MainTitle>
                             <p>a web developer</p>
