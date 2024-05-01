@@ -14,7 +14,7 @@ const SliderStyled = styled.div`
 
 const Slide = styled.div`
     text-align: center;
-    border: 1px solid red;
+   
     max-width: 500px;
 
 `

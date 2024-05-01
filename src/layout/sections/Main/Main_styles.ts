@@ -67,7 +67,10 @@ const Name = styled.h2`
 `
 
 const MainTitle = styled.h1`
-    ${font ({family: 'Poppins, sans-serif', Fmax:27, Fmin: 20})}
+    ${font ({family: 'Poppins, sans-serif', Fmax:27, Fmin: 20})};
+ p {
+     display: none;
+ }
    
     
 `
