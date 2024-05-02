@@ -1,13 +1,21 @@
 import React from 'react';
 import {Icon} from "../icon/Icon";
 import {animateScroll} from "react-scroll";
+import styled from "styled-components";
 
 
 export const Logo: React.FC = () => {
     return (
-        <a onClick={ () => {animateScroll.scrollToTop()}}>
+        <LogoStyled onClick={ () => {animateScroll.scrollToTop()}}>
             <Icon iconId={'codeSvg'} />
-        </a>
+        </LogoStyled>
+
     );
 };
 
+const LogoStyled = styled.a`
+   
+   
+   
+    
+`
