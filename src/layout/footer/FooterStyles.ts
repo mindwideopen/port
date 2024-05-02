@@ -3,6 +3,7 @@ import {font} from "../../styles/Common";
 import {theme} from "../../styles/Theme";
 
 const FooterStyled = styled.section`
+    position: relative;
     padding-top: 40px;
     display: flex;
     flex-direction: column;

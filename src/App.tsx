@@ -8,11 +8,16 @@ import {Testimonials} from "./layout/sections/testimonials/Testimonials";
 import {Contact} from "./layout/sections/contact/Contact";
 import {Footer} from "./layout/footer/Footer";
 import Invitation from "./layout/sections/Invitation/Invitation";
+import {ParticlesComponent} from "./components/particlesComponent/ParticlesComponent";
+
+
+
 
 
 function App() {
     return (
         <div className='App'>
+<ParticlesComponent />
             <Header/>
             <Main/>
             <Skills/>

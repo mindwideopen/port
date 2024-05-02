@@ -5,6 +5,7 @@ import {SectionTitle} from "../../../components/sectionTitle/SectionTitle";
 import {IconWrapper} from "../Skills/skill/Skill_Styles";
 
 const TestimonialsStyled=styled.section`
+    position: relative;
 
    
     

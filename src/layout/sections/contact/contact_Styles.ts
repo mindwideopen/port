@@ -3,7 +3,7 @@ import {theme} from "../../../styles/Theme";
 import {SectionTitle} from "../../../components/sectionTitle/SectionTitle";
 
 const ContactStyled = styled.section`
-    
+    position: relative;
     
     ${SectionTitle} {
         margin-top: -25px;
