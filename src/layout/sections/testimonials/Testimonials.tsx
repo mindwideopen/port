@@ -12,7 +12,7 @@ import {Container} from "../../../components/Container/Container";
 export const Testimonials:React.FC = () => {
     return (
 
-        <S.TestimonialsStyled>
+        <S.TestimonialsStyled id={'testimony'}>
             <Container>
                 <SectionTitle>Testimony</SectionTitle>
 

@@ -6,7 +6,7 @@ import {Container} from "../../../components/Container/Container";
 
 export const Invitation:React.FC = () => {
     return (
-        <InvitationStyled>
+        <InvitationStyled >
             <Container>
                 <SectionTitle>
                     I Am Available For Freelance

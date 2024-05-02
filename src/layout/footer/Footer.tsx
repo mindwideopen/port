@@ -22,7 +22,7 @@ const socialItemData = [
 
 export const Footer: React.FC = () => {
     return (
-        <S.FooterStyled>
+        <S.FooterStyled >
 
 
             <S.Name>Nikolay</S.Name>
