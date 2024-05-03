@@ -48,6 +48,7 @@ const NavLink = styled(Link)`
         right: -10px;
         z-index: 1;
         transform: scale(0);
+        transition: ${theme.animations.transition};
 
     }
 
@@ -59,6 +60,7 @@ const NavLink = styled(Link)`
 
         ${Mask} {
             color: ${theme.colors.font};
+            transition: ${theme.animations.transition};
 
             transform:  skew( 30deg) ;
 

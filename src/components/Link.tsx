@@ -21,6 +21,8 @@ export const Link = styled.a<LinkProps>`
     &::before {
 
         position: absolute;
+        height: 0;
+        transition: ${theme.animations.transition};
         display: inline-block;
         content: '';
         left: 0;
