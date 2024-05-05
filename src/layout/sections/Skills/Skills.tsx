@@ -4,7 +4,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Skill} from "./skill/Skill";
 import {SectionTitle} from "../../../components/sectionTitle/SectionTitle";
 import {Container} from "../../../components/Container/Container";
-import { Fade } from "react-awesome-reveal";
+import {Fade, Flip} from "react-awesome-reveal";
 
 const skillData = [
 
@@ -58,15 +58,15 @@ export const Skills = () => {
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
                 <FlexWrapper wrap={'wrap'} justify={'space-between'}>
-
-                    <Fade cascade={true}>
+                    <Flip cascade={true} damping={0.3}>
                         {skillData.map((item, index) =>
                             <Skill iconId={item.iconId} key={index}
                                    skillTitle={item.skillTitle}
                                    skillText={item.skillText}/>
                         )}
+                    </Flip>
 
-                    </Fade>
+
 
 
 

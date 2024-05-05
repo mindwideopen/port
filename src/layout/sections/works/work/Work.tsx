@@ -18,13 +18,16 @@ export const Work:React.FC<WorksPropsType> = (props: WorksPropsType) => {
             </S.ImageWrapper>
 
             <S.Description>
+
                 <S.WorkTitle>{props.workTitle}</S.WorkTitle>
                 <S.WorkText>{props.workText}</S.WorkText>
                 <Link href={'#'}>demo</Link>
                 <Link href={'#'}>code</Link>
+
             </S.Description>
 
         </S.WorkStyled>
+
     );
 };
 

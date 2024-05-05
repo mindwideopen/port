@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {theme} from "../../../../styles/Theme";
 import {Button} from "../../../../components/button/Button";
 import {Link} from "../../../../components/Link";
-
+import {motion} from "framer-motion";
 const WorksStyled = styled.section`
     position: relative;
 
@@ -18,8 +18,7 @@ const WorksStyled = styled.section`
 const WorkStyled = styled.div`
     background-color: ${theme.colors.secondaryBg};
 
-    width: 330px;
-    flex-grow: 1;
+  
 
     ${Link} {
         padding: 0;
@@ -35,9 +34,9 @@ const WorkStyled = styled.div`
 
     }
 
-    @media ${theme.media.desktop} {
-        max-width: 540px;
-    }
+    // @media ${theme.media.desktop} {
+    //     max-width: 540px;
+    // }
 
 
 
