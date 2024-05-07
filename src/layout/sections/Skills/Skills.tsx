@@ -4,7 +4,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Skill} from "./skill/Skill";
 import {SectionTitle} from "../../../components/sectionTitle/SectionTitle";
 import {Container} from "../../../components/Container/Container";
-import {Fade, Flip} from "react-awesome-reveal";
+import { Flip} from "react-awesome-reveal";
 
 const skillData = [
 
