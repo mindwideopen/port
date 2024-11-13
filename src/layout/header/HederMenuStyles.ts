@@ -24,8 +24,7 @@ const Mask = styled.span`
             display: inline-block;
             transform: translateY(-50%)
         }
-    }
-    
+    }   
 
 `
 const NavLink = styled(Link)`
@@ -74,15 +73,8 @@ const NavLink = styled(Link)`
     }
 
 `
-
-
-
 const MenuItem = styled.li`
-    position: relative;
-    
-    
-    
-    
+    position: relative;  
     
 `
 
@@ -181,9 +173,6 @@ const MobileMenuPopUp = styled.div<{isOpen: boolean}>`
     }
 
 `
-
-
-
 
 //DesktopMenu
 

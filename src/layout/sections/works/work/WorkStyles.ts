@@ -16,9 +16,7 @@ const WorksStyled = styled.section`
 
 
 const WorkStyled = styled.div`
-    background-color: ${theme.colors.secondaryBg};
-
-  
+    background-color: ${theme.colors.secondaryBg};  
 
     ${Link} {
         padding: 0;

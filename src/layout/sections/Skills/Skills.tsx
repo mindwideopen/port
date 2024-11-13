@@ -57,20 +57,22 @@ export const Skills = () => {
         <S.SkillsStyled id={'skills'}>
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
+                <Flip cascade={true} damping={0.3}>
                 <FlexWrapper wrap={'wrap'} justify={'space-between'}>
-                    <Flip cascade={true} damping={0.3}>
-                        {skillData.map((item, index) =>
-                            <Skill iconId={item.iconId} key={index}
-                                   skillTitle={item.skillTitle}
-                                   skillText={item.skillText}/>
-                        )}
-                    </Flip>
+                    {skillData.map((item, index) =>
+                        <Skill iconId={item.iconId} key={index}
+                               skillTitle={item.skillTitle}
+                               skillText={item.skillText}/>
+                    )}
+
+
 
 
 
 
 
                 </FlexWrapper>
+                </Flip>
             </Container>
 
 

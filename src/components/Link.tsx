@@ -36,12 +36,9 @@ export const Link = styled.a<LinkProps>`
     }
 
     &:hover {
-        &::before {
-            
+        &::before {            
                 height: 10px;
-           
-
-        }
+                   }
 
     }
 

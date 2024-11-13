@@ -37,6 +37,7 @@ const Name = styled.h2`
     //font-family: 'Josefin Sans', sans-serif;
     //font-size: 50px;
     //font-weight: 700;
+    
     margin:  10px 0 ;
     letter-spacing: 0.05em;
     @media ${theme.media.mobile} {
@@ -50,6 +51,9 @@ const Name = styled.h2`
         position: relative;
         z-index: 0;
         white-space: nowrap;
+        background-image: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(0, 0, 255, 1), rgba(255, 0, 0, 1));
+        color: transparent;
+        -webkit-background-clip: text;
     }
     span:before {
         

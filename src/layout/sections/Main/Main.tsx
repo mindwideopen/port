@@ -18,7 +18,7 @@ export const Main: React.FC = () => {
                     <div>
 
                         <S.Greet>Hello There</S.Greet>
-                        <S.Name>I am <span>Николай Литвинов</span></S.Name>
+                        <S.Name>I am <span>Nickolay Litvinov</span></S.Name>
                         <S.MainTitle>
                             <p>a web developer</p>
                         </S.MainTitle>
