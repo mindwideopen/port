@@ -6,7 +6,7 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 import {DesktopMenu} from "./desktopMenu/DesktopMenu";
 import {MobileMenu} from "./MobileMenu/MobileMenu";
 import {S} from './Header_Styles'
-
+import Headroom from 'react-headroom';
 
 
 export const Header: React.FC = () => {
@@ -23,20 +23,52 @@ export const Header: React.FC = () => {
     }, []);
 
 
-
-
     return (
+        // <S.StyledHeader>
+        //     <Headroom>
+        //         <Container>
+        //
+        //             <FlexWrapper justify={'space-between'}>
+        //
+        //                 <Logo/>
+        //
+        //
+        //                 {width < breakPoint ? <MobileMenu/>
+        //                     : <DesktopMenu/>}
+        //
+        //             </FlexWrapper>
+        //
+        //
+        //         </Container>
+        //     </Headroom>
+        //
+        // </S.StyledHeader>
         <S.StyledHeader>
-            <Container>
-                <FlexWrapper justify={'space-between'}>
-                    <Logo/>
-                    {width < breakPoint ? <MobileMenu />
-                                        : <DesktopMenu />}
+            <div className="relative z-50">
+                <Headroom>
+                    <div className="bg-white shadow-md">
+                        <Container>
+                            <FlexWrapper justify="space-between">
+                                <Logo />
+                                {width >= breakPoint && (
 
-                </FlexWrapper>
+                                    <DesktopMenu/>
+                                )}
 
-            </Container>
+                            </FlexWrapper>
+                        </Container>
+                    </div>
+                </Headroom>
+
+                {/* Бургер всегда видим */}
+                {width < breakPoint && (
+                    <div className="absolute right-4 top-4">
+                        <MobileMenu />
+                    </div>
+                )}
+            </div>
         </S.StyledHeader>
+
     );
 };
 

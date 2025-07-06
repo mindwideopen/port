@@ -1,43 +1,52 @@
 import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-import {S} from './SliderStyles'
+import {S} from './SliderStyles-main'
 import '../../styles/Slider.css'
+import cctv from "../../assets/svg/cctv-2417559_1280.jpg"
+import lotok from "../../assets/images/прокладка_кабеля_в_лотке.png"
+
+
+
+
+
+
 
 type SlidePropsType = {
-    text: string,
-    userName: string
-}
+    text: string;
+    backgroundImage: string;
 
-const Slide = (props:SlidePropsType) => {
-    return (<S.Slide>
-        <S.Text>{props.text}</S.Text>
-        <S.Name>{'@'+props.userName}</S.Name>
+};
 
-    </S.Slide>
-    )
-}
-
+const Slide = (props: SlidePropsType) => {
+    return (
+        <S.Slide backgroundImage={props.backgroundImage}>
+            <S.Text>{props.text}</S.Text>
+        </S.Slide>
+    );
+};
 
 const items = [
-    <Slide text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'} userName={'Ivan Inaniv'}/>,
-    <Slide text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'} userName={'Ivan Petrov'}/>,
-    <Slide text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'} userName={'Ivan Sidorov'}/>
+    <Slide text={'1'} backgroundImage={cctv} />,
+    <Slide text={'12'} backgroundImage={lotok} />,
+
 
 ];
 
-export const Slider = () => {
+
+export const SliderMain = () => {
 
     return <S.SliderStyled>
         <AliceCarousel
             mouseTracking
             items={items}
             autoPlay
-            autoPlayInterval={3000}
-            animationDuration={1000}
+            autoPlayInterval={2000}
+            animationDuration={500}
             infinite
             disableButtonsControls={false}  // показывать кнопки
-            disableDotsControls={false}     // показывать точки
+            disableDotsControls={false}
+            // показывать точки
         />
     </S.SliderStyled>
 }

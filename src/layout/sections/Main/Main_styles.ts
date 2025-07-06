@@ -6,6 +6,7 @@ const MainStyled = styled.section`
     background-color: burlywood;
     height: 100vh;
     display: flex;
+    
 
 `
 
@@ -47,27 +48,7 @@ const Name = styled.h2`
     
     
     
-    span {
-        position: relative;
-        z-index: 0;
-        white-space: nowrap;
-        background-image: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(0, 0, 255, 1), rgba(255, 0, 0, 1));
-        color: transparent;
-        -webkit-background-clip: text;
-    }
-    span:before {
-        
-        position: absolute;        
-        content:'';
-        display: inline-block;
-        width: 100%;
-        height: 20px;
-        background: ${theme.colors.accent};
-        bottom:0;
-        z-index: -1;
-        
-        
-    }
+    
 `
 
 const MainTitle = styled.h1`
@@ -87,25 +68,25 @@ const PhotoWrapper =  styled.div`
 
     }
     
-    &::before {
-        position: absolute;
-        content: '';
-        height: 470px;
-        width: 360px;
-        border:  5px solid ${theme.colors.accent};
-        top: -24px;
-        left: 24px;
-        z-index: -1;
-        
-        @media ${theme.media.mobile} {
-            width: 314px;
-            height: 414px;
-            top: -17px;
-            left: 20px;
-            
-            
-        }
-    }
+    // &::before {
+    //     position: absolute;
+    //     content: '';
+    //     height: 470px;
+    //     width: 360px;
+    //     border:  5px solid ${theme.colors.accent};
+    //     top: -24px;
+    //     left: 24px;
+    //     z-index: -1;
+    //    
+    //     @media ${theme.media.mobile} {
+    //         width: 314px;
+    //         height: 414px;
+    //         top: -17px;
+    //         left: 20px;
+    //        
+    //        
+    //     }
+    // }
     
 `
 

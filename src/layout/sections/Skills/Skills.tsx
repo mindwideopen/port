@@ -4,7 +4,9 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Skill} from "./skill/Skill";
 import {SectionTitle} from "../../../components/sectionTitle/SectionTitle";
 import {Container} from "../../../components/Container/Container";
-import { Flip} from "react-awesome-reveal";
+import { motion } from "framer-motion";
+import {fadeInUp} from "react-awesome-reveal/dist/animations/fading_entrances";
+import {Slide} from "react-awesome-reveal";
 
 const skillData = [
 
@@ -54,26 +56,33 @@ const skillData = [
 
 export const Skills = () => {
     return (
-        <S.SkillsStyled id={'skills'}>
+
+
+
+
+    <S.SkillsStyled id={'technologies'}>
+
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
-                <Flip cascade={true} damping={0.3}>
-                <FlexWrapper wrap={'wrap'} justify={'space-between'}>
-                    {skillData.map((item, index) =>
-                        <Skill iconId={item.iconId} key={index}
-                               skillTitle={item.skillTitle}
-                               skillText={item.skillText}/>
-                    )}
+
+                 <FlexWrapper wrap="wrap" justify="space-between">
+                     {skillData.map((item, index) => (
+                         <Slide>
+                             <Skill key={index} {...item} />
+                         </Slide>
 
 
 
 
+                     ))}
+                 </FlexWrapper>
 
 
 
-                </FlexWrapper>
-                </Flip>
+
             </Container>
+
+
 
 
         </S.SkillsStyled>

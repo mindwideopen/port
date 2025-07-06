@@ -6,28 +6,34 @@ import {S} from '../HederMenuStyles'
 // const items = ['Home', 'Skills', 'Works', 'Testimony', 'Contact',]
 const items = [
     {
-        title: 'Home',
-        href: 'home'
+        title: 'Компания',
+        href: 'company'
     },
     {
-        title: 'Skills',
-        href: 'skills'
+        title: 'Новости',
+        href: 'news'
     },
     {
-        title: 'Works',
+        title: 'Проекты',
         href: 'works'
     },
     {
-        title:'Testimony',
-        href: 'testimony'
+        title:'Технологии',
+        href: 'technologies'
     },
     {
-        title: 'Contact',
-        href: 'contact'
+        title: 'Услуги',
+        href: 'service'
+    },
+    {
+        title: 'Карьера',
+        href: 'career'
     }
     ]
-
-export const Menu: React.FC = () => {
+type Props = {
+    onClick?: () => void;
+};
+ const Menu: React.FC<Props> = ({onClick}) => {
     return (
 
             <ul>
@@ -40,17 +46,12 @@ export const Menu: React.FC = () => {
                                    delay={10}
                                    offset={-20}
                                    spy={true}
+                                   onClick={onClick}
                         >
 
                             {item.title}
 
-                            <S.Mask>
-                                <span>{item.title}</span>
-                            </S.Mask>
 
-                            <S.Mask>
-                                <span>{item.title}</span>
-                            </S.Mask>
 
                         </S.NavLink>
 
@@ -63,6 +64,5 @@ export const Menu: React.FC = () => {
     );
 };
 
+export default Menu;
 
-
-export default Menu

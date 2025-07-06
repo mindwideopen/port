@@ -1,4 +1,4 @@
-import './App.css';
+
 
 import {Header} from "./layout/header/Header";
 import {Main} from "./layout/sections/Main/Main";
@@ -9,25 +9,25 @@ import {Contact} from "./layout/sections/contact/Contact";
 import {Footer} from "./layout/footer/Footer";
 import Invitation from "./layout/sections/Invitation/Invitation";
 import {ParticlesComponent} from "./components/particlesComponent/ParticlesComponent";
-
-
+import React from "react";
+import {Slide} from "react-awesome-reveal";
 
 
 
 function App() {
     return (
         <div className='App'>
-<ParticlesComponent />
-            <Header/>
+            {/*<ParticlesComponent />*/}
+                <Header/>
             <Main/>
             <Skills/>
-            <Works/>
-            <Testimonials/>
-            <Contact />
-            <Invitation/>
-            <Footer/>
-        </div>
+            {/*<Works/>*/}
+            {/*<Testimonials/>*/}
+            {/*<Contact />*/}
+            {/*<Invitation/>*/}
+            {/*<Footer/>*/}
 
+        </div>
 
 
     );

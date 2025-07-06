@@ -1,6 +1,7 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../styles/Theme";
 import {Link} from "react-scroll";
+import {font} from "../../styles/Common";
 
 
 //Menu
@@ -29,47 +30,51 @@ const Mask = styled.span`
 `
 const NavLink = styled(Link)`
 
-    font-family: 'Josifin Sans', 'sans-serif';
+    font-family: 'JetBrains Mono', monospace;
     font-weight: 400;
     font-size: 30px;
     line-height: 55px;
     text-align: center;
-    color: transparent;
+    color: black;
     cursor: pointer;
+    transition: all .3s ease-in-out;
+    // &::before {
+    //     content: '';
+    //     display: inline-block;
+    //     height: 3px;
+    //     background-color: ${theme.colors.accent};
+    //     position: absolute;
+    //     top: 50%;
+    //     left: -10px;
+    //     right: -10px;
+    //     z-index: 1;
+    //     transform: scale(0);
+    //     transition: ${theme.animations.transition};
+    //
+    // }
+
     &::before {
-        content: '';
-        display: inline-block;
-        height: 3px;
-        background-color: ${theme.colors.accent};
+        transition: all .2s ease-in-out;
         position: absolute;
-        top: 50%;
-        left: -10px;
-        right: -10px;
-        z-index: 1;
-        transform: scale(0);
-        transition: ${theme.animations.transition};
+        content: '';
+        width: 100%;
+        height: 10px;
+        background-color: #003366;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        z-index: -1;
 
     }
-
-    &:hover, &.active{
-
-        &::before {
-            transform: scale(1);
-        }
-
-        ${Mask} {
-            color: ${theme.colors.font};
-            transition: ${theme.animations.transition};
-
-            transform:  skew( 30deg) ;
-
-            & + ${Mask} {
-
-                transform:  skew(-30deg);
+    &:hover::before {
+        width: 100%;
+        height: 80%;
+        border-radius: 10px;
             }
-        }
 
-
+    &:hover {
+       color: white;
+        padding: 30px;
     }
 
 `
@@ -144,21 +149,63 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
     }
 `
 
-const MobileMenuPopUp = styled.div<{isOpen: boolean}>`
-    display: none;
+// const MobileMenuPopUp = styled.div<{isOpen: boolean}>`
+//
+//     display: none;
+//     position: fixed;
+//     background-color: ${theme.colors.primaryBg};
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     z-index: 99999;
+//
+//     ${props => props.isOpen && css <{isOpen: boolean}>`
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//
+//     `}
+//
+//     ul {
+//         display: flex;
+//         gap: 20px;
+//         justify-content: center;
+//         flex-direction: column;
+//         align-items: center;
+//
+//
+//
+//         }
+//     }
+//
+// `
+
+ const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
     position: fixed;
-    background-color: rgba(31,32,32,0.9);
+    background-color: ${theme.colors.primaryBg};
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 99999;
-    
-    ${props => props.isOpen && css <{isOpen: boolean}>`
+
     display: flex;
     justify-content: center;
     align-items: center;
-    `}
+
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+    ${({ isOpen }) =>
+            isOpen &&
+            css`
+                transform: translateX(0);
+                opacity: 1;
+                pointer-events: auto;
+            `}
 
     ul {
         display: flex;
@@ -166,17 +213,16 @@ const MobileMenuPopUp = styled.div<{isOpen: boolean}>`
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        
-        
-            
-        }
     }
+`;
 
-`
 
 //DesktopMenu
 
 const DesktopMenu = styled.nav`
+    
+    
+    ${font ({family: 'JetBrains Mono, sans-serif', weight:700, Fmax:50, Fmin: 36})}
     // @media ${theme.media.tablet}
     // {
     //     display: none;
@@ -185,6 +231,7 @@ const DesktopMenu = styled.nav`
         display: flex;
         gap: 20px;
         justify-content: center;
+        flex-wrap: wrap;
     }
     
 `

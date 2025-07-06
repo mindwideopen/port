@@ -1,21 +1,37 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
+import type {SlideProps} from "react-awesome-reveal";
+
 
 const SliderStyled = styled.div`
     margin-top: 74px;  
-    max-width: 500px;
+  
+   
      width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
 `
+type SlidePropsType = {
+    backgroundImage: string,
+}
 
-const Slide = styled.div`
-    text-align: center;   
-    max-width: 500px;
-
-`
+const Slide = styled.div<SlidePropsType>`
+    width: 100%;
+    border-radius: 30px;
+   
+    background-image: url(${props => props.backgroundImage});
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    text-align: center;
+   
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
 
 const Text = styled.p`
     font-family: Poppins, sans-serif;
@@ -44,7 +60,12 @@ const Name = styled.span`
 
 `
 
+const Test = styled.div`
+    border: 1px solid ${theme.colors.borderColor};
+width: 300px;
+height: 300px;
+`
 
 export const S = {
-    SliderStyled, Name,Text, Slide
+    SliderStyled, Name,Text, Slide, Test
 }
